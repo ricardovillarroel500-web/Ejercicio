@@ -21,4 +21,6 @@ def validar_email(email:str):
     """
     Valida que email sea un correo válido"""
     # Completar
-    return True
+    patron_mail = r"[\w.+-]+@[\w-]+\.[a-zA-Z.]{2,}"
+    return bool(re.fullmatch(patron_mail, email.strip()))
+    
